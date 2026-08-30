@@ -1,0 +1,29 @@
+# ROS 2 build files
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environment
+aerocue_ai_env/
+.venv/
+venv/
+
+# YOLO models and test images
+*.pt
+*.onnx
+*.jpg
+*.jpeg
+*.png
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
