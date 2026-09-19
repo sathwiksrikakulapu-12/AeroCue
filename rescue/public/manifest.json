@@ -1,0 +1,9 @@
+{
+  "name": "AeroCue Rescue",
+  "short_name": "AeroCue Rescue",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071018",
+  "theme_color": "#071018",
+  "description": "AeroCue field rescue operations interface"
+}

@@ -1,0 +1,296 @@
+.telemetry-panel {
+  margin-top: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  color: var(--text);
+}
+
+.telemetry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.telemetry-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #55a9ff;
+}
+
+.telemetry-title-row h2 {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.telemetry-header p {
+  margin: 6px 0 0 28px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.telemetry-live {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #3ee49d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3ee49d;
+  box-shadow: 0 0 10px #3ee49d;
+}
+
+.telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  padding: 18px;
+  background: var(--surface);
+}
+
+.drone-telemetry-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  color: var(--text);
+}
+
+.drone-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-2);
+}
+
+.drone-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 22px;
+  border-radius: 5px;
+  background: rgba(85, 169, 255, 0.14);
+  color: #55a9ff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.drone-card-header h3 {
+  margin: 7px 0 0;
+  color: var(--text);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.connected-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #3ee49d;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.connected-status span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #3ee49d;
+}
+
+.telemetry-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-2);
+}
+
+.gps-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #55a9ff;
+}
+
+.gps-location div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.gps-location span,
+.telemetry-stat span {
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.gps-location strong {
+  color: var(--text);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.telemetry-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+}
+
+.telemetry-stat {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px;
+  background: var(--surface-2);
+  color: var(--muted);
+}
+
+.telemetry-stat div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.telemetry-stat strong {
+  color: var(--text);
+  font-size: 11px;
+}
+
+.telemetry-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 15px;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  background: var(--surface-2);
+}
+
+.telemetry-footer div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.telemetry-footer span {
+  color: #3ee49d;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   LIGHT MODE
+========================================================= */
+
+.app.light .telemetry-panel {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.app.light .telemetry-header {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.app.light .telemetry-title-row h2 {
+  color: var(--text);
+}
+
+.app.light .telemetry-header p {
+  color: var(--muted);
+}
+
+.app.light .telemetry-grid {
+  background: var(--surface);
+}
+
+.app.light .drone-telemetry-card {
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+
+.app.light .drone-card-header {
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+
+.app.light .drone-card-header h3 {
+  color: var(--text);
+}
+
+.app.light .telemetry-main {
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+
+.app.light .telemetry-stat {
+  background: var(--surface-2);
+}
+
+.app.light .telemetry-stats {
+  background: var(--border);
+}
+
+.app.light .gps-location strong {
+  color: var(--text);
+}
+
+.app.light .telemetry-stat strong {
+  color: var(--text);
+}
+
+.app.light .telemetry-footer {
+  background: var(--surface-2);
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .telemetry-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .telemetry-header {
+    padding: 16px;
+  }
+
+  .telemetry-grid {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .telemetry-main {
+    grid-template-columns: 1fr;
+  }
+}

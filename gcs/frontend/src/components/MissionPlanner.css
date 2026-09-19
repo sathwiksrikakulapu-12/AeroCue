@@ -1,0 +1,418 @@
+.mission-planner {
+  margin-top: 20px;
+  margin-bottom: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  color: var(--text);
+}
+
+.mission-planner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.mission-planner-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #55a9ff;
+}
+
+.mission-planner-title h2 {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  color: var(--text);
+}
+
+.mission-planner-header p {
+  margin: 6px 0 0 28px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.planner-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.planner-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+
+.planner-dot.ready {
+  background: #3ee49d;
+  box-shadow: 0 0 10px #3ee49d;
+}
+
+.planner-input-area {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1px;
+  background: var(--border);
+}
+
+.coordinate-section,
+.mission-settings {
+  padding: 18px;
+  background: var(--surface-2);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.coordinate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.coordinate-grid label,
+.settings-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.coordinate-grid label span,
+.settings-grid label span {
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.coordinate-grid input,
+.settings-grid select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 11px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  font-size: 11px;
+}
+
+.coordinate-grid input:focus,
+.settings-grid select:focus {
+  border-color: #55a9ff;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.generate-mission-button {
+  width: calc(100% - 36px);
+  margin: 18px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 0;
+  border-radius: 7px;
+  background: #1c8cff;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.generate-mission-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+
+.planner-error {
+  margin: 0 18px 18px;
+  padding: 11px 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #5b3030;
+  border-radius: 6px;
+  background: #241418;
+  color: #ff8585;
+  font-size: 10px;
+}
+
+.generated-mission {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.generated-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 18px;
+  background: var(--surface-2);
+}
+
+.generated-header > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.generated-header span {
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.generated-header strong {
+  color: var(--text);
+  font-size: 12px;
+}
+
+.mission-ready {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #3ee49d;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.strip-list {
+  padding: 12px 18px;
+  background: var(--surface);
+}
+
+.strip-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 100px;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.strip-row:last-child {
+  border-bottom: none;
+}
+
+.strip-drone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.strip-icon {
+  width: 31px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(85, 169, 255, 0.14);
+  color: #55a9ff;
+}
+
+.strip-drone div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.strip-drone strong {
+  color: var(--text);
+  font-size: 11px;
+}
+
+.strip-drone span {
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: 0.7px;
+}
+
+.strip-direction,
+.strip-waypoints {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.strip-direction span,
+.strip-waypoints span {
+  color: var(--muted);
+  font-size: 7px;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+
+.strip-direction strong,
+.strip-waypoints strong {
+  color: var(--text);
+  font-size: 10px;
+}
+
+.waypoint-preview {
+  margin: 0 18px 18px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+}
+
+.waypoint-table {
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.waypoint-table-header,
+.waypoint-row {
+  display: grid;
+  grid-template-columns: 1fr 70px 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 9px 11px;
+}
+
+.waypoint-table-header {
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.waypoint-row {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 9px;
+}
+
+.waypoint-row span:first-child {
+  color: #55a9ff;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   LIGHT MODE
+========================================================= */
+
+.app.light .mission-planner {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.app.light .mission-planner-header {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.app.light .planner-input-area {
+  background: var(--border);
+}
+
+.app.light .coordinate-section,
+.app.light .mission-settings {
+  background: var(--surface-2);
+}
+
+.app.light .coordinate-grid input,
+.app.light .settings-grid select {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.app.light .generated-mission {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.app.light .generated-header {
+  background: var(--surface-2);
+}
+
+.app.light .strip-list {
+  background: var(--surface);
+}
+
+.app.light .waypoint-table-header {
+  background: var(--surface-2);
+}
+
+.app.light .waypoint-row {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .planner-input-area {
+    grid-template-columns: 1fr;
+  }
+
+  .strip-row {
+    grid-template-columns: 1fr;
+  }
+
+  .waypoint-table {
+    overflow-x: auto;
+  }
+
+  .waypoint-table-header,
+  .waypoint-row {
+    min-width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mission-planner-header {
+    padding: 16px;
+  }
+
+  .coordinate-section,
+  .mission-settings {
+    padding: 14px;
+  }
+
+  .coordinate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .generate-mission-button {
+    width: calc(100% - 28px);
+    margin: 14px;
+  }
+}
